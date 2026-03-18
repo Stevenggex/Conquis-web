@@ -3,101 +3,218 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Club Conquistadores Sear Jasub</title>
+    <title>Club Conquistadores SEAR JASUB</title>
 
     <style>
+        /* Estilos Generales de la pagina */
+        html {
+            scroll-behavior: smooth; /* Menu interactivo */
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             color: #333;
             margin: 0;
             padding: 0;
-            text-align: center;
-
         }
 
+        /* Menu de navegacion */
+        nav {
+            background-color: #1a252f;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover{
+            color: #f1c40f;
+        }
+
+        /* Seccion de bienvenida*/
         header {
             background-color: #2c3e50;
             color: white;
             padding: 40px 20px;
+            text-align: center;
         }
 
         .contenedor-logo {
             background-color: #2e4a22;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 25px;
+            border-radius: 15px;
             display: inline-block;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
         }
 
         .logo {
-            width: 120px;
+            width: 250px;
             height: auto;
+            max-width: 100%;
         }
-
+        
         .contenedor {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Secciones de contenido */
+        .mision {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .que-hacemos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .tarjeta {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
             padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         }
 
-        .galeria img {
+        .tarjeta img {
             width: 100%;
-            max-width: 300px;
+            height: 250px;
+            object-fit: cover;
             border-radius: 8px;
-            margin: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: 15px;
         }
 
-        .redes {
-            margin-top: 40px;
-        }
-
-        .boton-link {
-            text-decoration: none;
+        /* --- GRAN BANNER DE INSTAGRAM --- */
+        .banner-ig {
+            background-color: #E1306C;
             color: white;
-            padding: 12px 24px;
-            border-radius: 5px;
-            margin: 0 10px;
-            font-weight: bold;
-            display: inline-block;
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
         }
 
-        .ig { background-color: #E1306C; }
-        .wsp { background-color: #25D366; }
+        .boton-blanco {
+            background-color: white;
+            color: #E1306C;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        /* --- NUEVA SECCIÓN DE CONTACTO (WHATSAPP) --- */
+        .contacto-wsp {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin: 50px auto; /* Centra la sección y da espacio arriba/abajo */
+            max-width: 600px; /* La hace un poco más delgada para resaltar */
+        }
+
+        .boton-wsp-grande {
+            background-color: #25D366; /* Color oficial de WhatsApp */
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px; /* Botón bien redondeado */
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .boton-wsp-grande:hover {
+            background-color: #1ebe57; /* Un tono más oscuro al pasar el mouse */
+        }
 
     </style>
 </head>
 <body>
 
-    <header>
+    <nav>
+        <a href="#bienvenida">Inicio</a>
+        <a href="#mision">Nuestro Objetivo</a>
+        <a href="#actividades">Qué Hacemos</a>
+        <a href="#redes">Redes Sociales</a>
+    </nav>
+
+    <header id="bienvenida">
         <div class="contenedor-logo">
             <img src="imagenes/logo.club.jfif" alt="Logo conquistadores Sear Jasub" class="logo">
         </div>
-        <h1>Club de conquistadores Sear Jasub</h1>
-        <p>Aventuras, Liderazgo y servicio</p>
+        <h1>Club de Conquistadores SEAR JASUB</h1>
+        <p>Un proyecto social para transformar vidas a través del liderazgo y la naturaleza.</p>
     </header>
-
+ 
     <div class="contenedor">
 
-        <section>
-            <h2>¿Que hacemos?</h2>
-            <p>Somos un club dedicado a desarrollar el talento de los jóvenes, fomentando el trabajo en equipo, la supervivencia en la naturaleza y el crecimiento personal. Realizamos campamentos, caminatas y proyectos de ayuda comunitaria.</p>
+        <section id="mision" class="mision">
+            <h2>Nuestro Objetivo</h2>
+            <p>Impactar la vida de niños y adolescentes fomentando el trabajo en equipo, los valores morales y el amor por la naturaleza. Nos reunimos semanalmente para desarrollar talentos, habilidades y crear un ambiente seguro donde cada Conquistador pueda crecer de manera integral.</p>
         </section>
 
-        <section class="galeria">
-            <h2>Nuestras actividades</h2>
-            <img src="imagenes/foto1.jfif" alt="Actividad del club">
-            <img src="imagenes/Gemini_Generated_Image_hkwru4hkwru4hkwr.png" alt="Campamento de conquistadores">
-        </section>
+        <h2 class="titulo-seccion" id="actividades">¿Qué Hacemos?</h2>
 
-        <section class="redes">
-            <h2>Unete a nosotros</h2>
-            <a href="https://www.instagram.com/conquissearjasub?igsh=NDRxbTAxYTR3aTV4" target="_blank" class="boton-link ig">Síguenos en Instagram</a>
-            <a href="https://wa.me/593979441699" target="_blank" class="boton-link wsp">Escríbenos por WhatsApp</a>
-        </section>
+        <section class="que-hacemos">
+            <div class="tarjeta">
+                <h3>Actividades Locales</h3>
+                <p>Realizamos especialidades, nudos, marchas y proyectos de ayuda comunitaria en nuestra ciudad. Aprendemos primeros auxilios y liderazgo para servir a los demás.</p>
+                <img src="imagenes/foto2.jfif" alt="Actividades del club">
+                <img src="imagenes/foto3.jfif" alt="Actividades del club">
+            </div>
 
-    </div>
-    
+            <div class="tarjeta"> 
+                <h3>Campamentos y Supervivencia</h3>
+                <p>Salimos a la naturaleza para aplicar lo aprendido. Encendemos fogatas, armamos refugios, participamos en eventos y fortalecemos nuestra amistad al aire libre.</p>
+                <img src="imagenes/foto1.jfif" alt="Actividad del club">
+                <img src="imagenes/Gemini_Generated_Image_hkwru4hkwru4hkwr.png" alt="Campamento de conquistadores">
+            </div>
+        </section>
+        
+    </div> <section id="redes" class="banner-ig">
+        <h2>Conoce nuestra página de Instagram</h2>
+        <p>Entérate de nuestras próximas salidas, eventos y vive la aventura con nosotros.</p>
+        <a href="https://www.instagram.com/conquissearjasub?igsh=NDRxbTAxYTR3aTV4" target="_blank" class="boton-blanco">Síguenos en Instagram</a>
+    </section>
+
+    <section class="contacto-wsp">
+        <h2>¿Quieres más información?</h2>
+        <p>Si te gustaría unirte al club SEAR JASUB, tienes alguna duda sobre nuestras actividades o quieres saber cuándo es nuestra próxima reunión, ¡escríbenos directamente!</p>
+        <a href="https://wa.me/593979441699" target="_blank" class="boton-wsp-grande">Escríbenos por WhatsApp</a>
+    </section>
+
 </body>
 </html>
